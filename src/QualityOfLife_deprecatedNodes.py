@@ -193,7 +193,7 @@ class openAi_chat_messages_Combine_deprecated:
         )
 class openAi_Image_create_deprecated:
     """
-    create image using openai 
+    create image using openai
     """
     # Define the input types for the node
     @classmethod
@@ -292,15 +292,19 @@ class O_String_deprecated:
     """
     @classmethod
     def INPUT_TYPES(cls):
-        return {"required": {"string": ("STRING", {"multiline": True})}}
-
-    RETURN_TYPES = ("STR",)
+        return {
+            "required": {
+                "string": ("STRING", {'multiline': True}),
+            }
+        }
+        # return {"required": {"string": ("STRING", {"multiline": True})}}
+    RETURN_TYPES = ("STRING",)
     FUNCTION = "ostr"
     CATEGORY = "O/deprecated/string"
 
     @staticmethod
     def ostr(string):
-        return ({"string": string},)
+        return (string,)
 
 
 class DebugString_deprecated:
